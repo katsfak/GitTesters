@@ -29,12 +29,17 @@ async function fetchMovieData(movie) {
 function displayMovieData(data) {
     let movieDetails = document.getElementById("movieDetails");
     let posterHTML = data.Poster !== "N/A" ? `<img src="${data.Poster}" alt="${data.Title} Poster">` : "<p>Poster not available</p>";
+
     movieDetails.innerHTML = `
-        <h2>${data.Title} (${data.Year})</h2>
-        <p><strong>Genre:</strong> ${data.Genre}</p>
-        <p><strong>Director:</strong> ${data.Director}</p>
-        <p><strong>Plot:</strong> ${data.Plot}</p>
-        ${posterHTML}
+        <div class="movie-container">
+            <div class="movie-poster">${posterHTML}</div>
+            <div class="movie-info">
+                <h2 class="movie-title">${data.Title} (${data.Year})</h2>
+                <p><strong>Genre:</strong> ${data.Genre}</p>
+                <p><strong>Director:</strong> ${data.Director}</p>
+                <p><strong>Plot:</strong> ${data.Plot}</p>
+            </div>
+        </div>
     `;
 }
 
