@@ -4,7 +4,7 @@ A simple application that generates random advice for users.
 
 ## Features
 
-- Generate random advice on demand
+- Provide Movies Information
 - Clean and intuitive user interface
 - Fast response times
 
